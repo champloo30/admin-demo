@@ -43,11 +43,14 @@ const BillboardForm: React.FC<BillboardFormProps> = ({
       imageUrl: ''
     }
   })
-
+  
   const title = initialData ? 'Edit Billboard' : 'Create Billboard'
   const description = initialData ? 'Edit a billboard' : 'Add a new billboard'
   const toastMsg = initialData ? 'Billboard updated.' : 'Billboard created.'
   const action = initialData ? 'Save changes' : 'Create'
+
+  
+  console.log(title);
 
   async function onSubmit(data: BillboardFormValues) {
     try {
